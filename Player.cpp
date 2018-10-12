@@ -4,14 +4,21 @@
 
 #include "Player.h"
 #include <iostream>
+#include <random>
 #include <algorithm>
 #include <map>
 
 
+Player::Player(int Position, int Type, int HandRange) {
+    GamePosition = Position;
+    PlayerType = Type;
+    Player::GenerateHand(HandRange);
+}
+
 void Player::GenerateHand(int HandRange) {
     for (int i = 0; i < HandRange; ++i) {
 
-        Hand[i] = rand() % HandRange + 1;
+        Hand[i] = rand()% HandRange + 1;
 
     }
 }

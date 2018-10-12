@@ -9,13 +9,12 @@
 
 class Player {
 public:
-    Player(int Position, int Type) {
-        GamePosition = Position;
-        PlayerType = Type;
-    }
+    Player(int, int, int);
 
     void RemoveCards(); // TODO Implement Function
     void AddCard(int); // TODO Implement Function
+    void Guess();
+    void GenerateHand(int);
 
     int CardsLeft();
     int SetID();
@@ -26,8 +25,7 @@ public:
 
     void Reset(); //TODO Make more rich return value
 private:
-    void GenerateHand(int);
-    int Hand [5];
+    int Hand [8];
 
 };
 
